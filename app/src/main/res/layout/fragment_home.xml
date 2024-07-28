@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <!--toolbar shimmer-->
+    <com.skydoves.androidveil.VeilLayout
+        android:id="@+id/veilLayout_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginTop="@dimen/_26mdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:veilLayout_radius="@dimen/_32mdp"
+        app:veilLayout_shimmerEnable="true"
+        app:veilLayout_veiled="false">
+        <!--content-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="rtl">
+            <!--logo-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/logoImg"
+                android:layout_width="@dimen/_44mdp"
+                android:layout_height="@dimen/_44mdp"
+                android:layout_marginStart="@dimen/_10mdp"
+                android:padding="@dimen/_2mdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo"
+                style="@style/logoTintStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/ImageViewRound" />
+            <!--app name-->
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12mdp"
+                android:layout_marginTop="@dimen/mines8mdp"
+                android:text="@string/digiato"
+                style="@style/title_Style"
+                android:textAppearance="@style/TextAppearance_Bold"
+                app:layout_constraintBottom_toBottomOf="@id/logoImg"
+                app:layout_constraintStart_toEndOf="@id/logoImg"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--date-->
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance_Farsi_Digits"
+                app:layout_constraintStart_toStartOf="@id/txt_name"
+                app:layout_constraintTop_toBottomOf="@id/txt_name"
+                tools:text="1403/مرداد/02"
+                style="@style/sub_title_Style"/>
+            <!--notification-->
+            <ImageView
+                android:id="@+id/img_notification"
+                android:layout_width="@dimen/_32mdp"
+                android:layout_height="@dimen/_32mdp"
+                android:layout_marginEnd="@dimen/_12mdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_4mdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/notification"
+                style="@style/logoTintStyle"
+                app:layout_constraintBottom_toBottomOf="@id/logoImg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/logoImg"
+                 />
+            <!--Badge-->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/BadgeImg"
+                android:layout_width="@dimen/_8mdp"
+                android:layout_height="@dimen/_8mdp"
+                android:layout_margin="@dimen/_2mdp"
+                android:background="@color/Safety_orange"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="@id/img_notification"
+                app:layout_constraintTop_toTopOf="@id/img_notification"
+                app:shapeAppearance="@style/ImageViewRound" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.skydoves.androidveil.VeilLayout>
+    <!--content-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_6mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/veilLayout_toolbar">
+        <!--nested-->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollLay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:fillViewport="true">
+            <!--parent content-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12mdp">
+                <!--content shimmer-->
+                <com.skydoves.androidveil.VeilLayout
+                    android:id="@+id/veilLayout_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:veilLayout_baseAlpha="0.6"
+                    app:veilLayout_radius="@dimen/_18mdp"
+                    app:veilLayout_shimmerEnable="true">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <!--trend news-->
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/img_trend"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_160mdp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shapeAppearance="@style/RoundImageView"
+                            tools:src="@tools:sample/backgrounds/scenic" />
+                        <!--txt trend-->
+                        <TextView
+                            android:id="@+id/trend_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_12mdp"
+                            android:background="@drawable/bg_trend"
+                            android:padding="@dimen/_6mdp"
+                            android:text="@string/txt_trend"
+                            android:textAppearance="@style/TextAppearance_Bold"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/img_trend" />
+                        <!--title trend-->
+                        <TextView
+                            android:id="@+id/title_trend"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6mdp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            style="@style/title_Style" android:textAppearance="@style/TextAppearance_light"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/img_trend"
+                            tools:text="@string/txt_tools" />
+
+                        <!--today hot-->
+                        <TextView
+                            android:id="@+id/txt_today_hot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8mdp"
+                            android:layout_marginEnd="@dimen/_10mdp"
+                            android:drawablePadding="@dimen/_3mdp"
+                            android:gravity="center"
+                            android:text="@string/hot_today"
+                            style="@style/category_color_text" android:textAppearance="@style/TextAppearance_Bold"
+                            app:drawableEndCompat="@drawable/ic_line"
+                            app:drawableTint="@color/Safety_orange"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/title_trend" />
+                        <!--list hot today-->
+                        <com.skydoves.androidveil.VeilRecyclerFrameView
+                            android:id="@+id/today_hot_List"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_140mdp"
+                            android:layout_marginTop="@dimen/_8mdp"
+                            android:clipToPadding="false"
+                            app:layout_constraintTop_toBottomOf="@id/txt_today_hot"
+                            app:veilFrame_layout="@layout/item_hot"
+                            app:veilFrame_radius="@dimen/_4mdp"
+                            app:veilFrame_shimmerEnable="true"
+                            app:veilFrame_veiled="true"
+                            app:veilFrame_baseColor="@android:color/holo_green_dark"
+                            app:veilFrame_highlightColor="@android:color/holo_green_light"
+                            app:veilFrame_baseAlpha="0.6"
+                            app:veilFrame_highlightAlpha="1.0"
+                            app:veilFrame_isItemWrapContentHeight="true"
+                            app:veilFrame_isItemWrapContentWidth="true"  />
+
+                        <!--title suggestion-->
+                        <TextView
+                            android:id="@+id/txt_suggestion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8mdp"
+                            android:layout_marginEnd="@dimen/_10mdp"
+                            android:drawablePadding="@dimen/_3mdp"
+                            android:gravity="center"
+                            android:text="@string/suggestion"
+                            style="@style/category_color_text" android:textAppearance="@style/TextAppearance_Bold"
+                            app:drawableEndCompat="@drawable/ic_line"
+                            app:drawableTint="@color/Safety_orange"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/today_hot_List" />
+
+                        <com.skydoves.androidveil.VeilRecyclerFrameView
+                            android:id="@+id/suggestion_List"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_186mdp"
+                            android:layout_marginTop="@dimen/_8mdp"
+                            android:clipToPadding="false"
+                            app:layout_constraintTop_toBottomOf="@id/txt_suggestion"
+                            app:veilFrame_baseAlpha="0.6"
+                            app:veilFrame_baseColor="@color/Light_sky_blue"
+                            app:veilFrame_highlightAlpha="1.0"
+                            app:veilFrame_highlightColor="@color/Blue_cola"
+                            app:veilFrame_radius="@dimen/_4mdp"
+                            app:veilFrame_shimmerEnable="true"
+                            app:veilFrame_veiled="false" />
+                        <!--today news-->
+                        <TextView
+                            android:id="@+id/txt_today"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_10mdp"
+                            android:text="@string/today"
+                            style="@style/category_color_text" android:textAppearance="@style/TextAppearance_Bold"
+                            app:drawableEndCompat="@drawable/ic_line"
+                            app:drawableTint="@color/Safety_orange"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/suggestion_List" />
+                        <!--today list-->
+                        <com.skydoves.androidveil.VeilRecyclerFrameView
+                            android:id="@+id/today_List"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_8mdp"
+                            android:clipToPadding="false"
+                            app:layout_constraintTop_toBottomOf="@id/txt_today"
+                            app:veilFrame_isItemWrapContentHeight="true"
+                            app:veilFrame_isItemWrapContentWidth="true"
+                            app:veilFrame_layout="@layout/item_today"
+                            app:veilFrame_radius="@dimen/_4mdp"
+                            app:veilFrame_shimmerEnable="true" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.skydoves.androidveil.VeilLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

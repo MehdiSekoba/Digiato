@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="3000"
+        motion:transitionFlags="disableIntraAutoTransition">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                motion:framePosition="30"
+                motion:motionTarget="@id/blue_digiato" />
+            <KeyAttribute
+                android:scaleX="0.65"
+                android:scaleY="0.65"
+                motion:framePosition="50"
+                motion:motionTarget="@id/blue_digiato" />
+            <KeyAttribute
+                android:scaleX="0.75"
+                android:scaleY="0.75"
+                motion:framePosition="80"
+                motion:motionTarget="@id/blue_digiato" />
+            <KeyAttribute
+                android:scaleX="2"
+                android:scaleY="2"
+                motion:framePosition="100"
+                motion:motionTarget="@id/blue_digiato" />
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/blue_digiato"
+            android:layout_width="@dimen/_100mdp"
+            android:layout_height="@dimen/_100mdp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end" />
+</MotionScene>

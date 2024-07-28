@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_230mdp"
+    android:layout_height="@dimen/_110mdp"
+    android:layout_margin="@dimen/_5mdp">
+    <!--photo-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_img"
+        android:layout_width="@dimen/_80mdp"
+        android:layout_height="@dimen/_80mdp"
+        android:layout_margin="@dimen/_4mdp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/RoundImageView"
+        tools:src="@tools:sample/backgrounds/scenic" />
+    <!--title-->
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4mdp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        style="@style/title_Style"
+        android:textAppearance="@style/TextAppearance_Bold"
+        app:layout_constraintEnd_toStartOf="@id/item_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/item_img"
+        tools:text="@string/txt_tools" />
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_4mdp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        style="@style/author_color_text"
+        android:textAppearance="@style/TextAppearance_mobile_bold"
+        app:layout_constraintEnd_toStartOf="@id/item_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
+        tools:text="@string/txt_tools" />
+</androidx.constraintlayout.widget.ConstraintLayout>

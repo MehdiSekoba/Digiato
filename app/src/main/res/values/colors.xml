@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!--my color-->
+    <color name="Patrick_blue">#182172</color>
+    <color name="Onyx">#32373c</color>
+    <color name="Crayola">#abb8c3</color>
+    <color name="Pearl_Aqua">#7bdcb5</color>
+    <color name="Caribbean_Green">#00d084</color>
+    <color name="Light_sky_blue">#8ed1fc</color>
+    <color name="Blue_cola">#0693e3</color>
+    <color name="Davy_gray">#555555</color>
+    <color name="Safety_orange">#ff6900</color>
+    <color name="text_color">#484848</color>
+    <color name="light_color">@android:color/white</color>
+    <color name="dark_gunmetal">#1F1D36</color>
+    <color name="dark_gunmetal_alpha">#801F1D36</color>
+
+    <!--text color light-->
+    <color name="Cool_gray">#888dab</color>
+    <color name="Blue_Jeans">#60bfee</color>
+    <color name="Anti_Flash_White">#F3F3F8</color>
+    <color name="Medium_Vermilion">#E25B39</color>
+    <color name="Light_Periwinkle">#C1D1DA</color>
+    <color name="dark_sky_blue">#93B4D4</color>
+
+    <!--dark color-->
+    <color name="chinese_black">#14141C</color>
+    <color name="light_periwinkle">#BFCFDD</color>
+    <color name="Burnt_Sienna">#E67950</color>
+
+
+</resources>

@@ -1,0 +1,14 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- State Checked -->
+    <item android:state_checked="true">
+        <layer-list>
+            <item android:drawable="@drawable/ic_mon"
+                android:height="16dp"
+                android:width="16dp"
+                android:gravity="center"/>
+        </layer-list>
+    </item>
+
+    <!-- State Unchecked -->
+    <item android:drawable="@drawable/ic_sun"  />
+</selector>

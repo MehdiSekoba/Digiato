@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/_180mdp"
+    android:layout_height="@dimen/_180mdp"
+    android:layout_margin="@dimen/_5mdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_8mdp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--photos-->
+        <ImageView
+            android:id="@+id/itemImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            tools:src="@tools:sample/backgrounds/scenic" />
+        <!--shadow-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_shadow_dark" />
+        <!--bookmark-->
+        <ImageView
+            android:id="@+id/img_bookmark"
+            android:layout_width="@dimen/_32mdp"
+            android:layout_height="@dimen/_32mdp"
+            android:layout_margin="@dimen/_8mdp"
+            android:background="@drawable/bg_blue"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_6mdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bookmark_out"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+        <!--guideline-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.40" />
+        <!--category-->
+        <TextView
+            android:id="@+id/txt_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10mdp"
+            android:background="@drawable/bg_blue"
+            android:backgroundTint="@color/Patrick_blue"
+            android:padding="@dimen/_6mdp"
+            android:textAppearance="@style/TextAppearance_mobile_bold"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guideline"
+            tools:text="میان شته ای" />
+        <!--title-->
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4mdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:layout_marginHorizontal="@dimen/_2mdp"
+            android:textAppearance="@style/TextAppearance_mobile_bold"
+            android:lineSpacingExtra="1dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/txt_category"
+            app:layout_constraintTop_toBottomOf="@id/txt_category"
+            tools:text="@string/txt_tools" />
+        <!--author-->
+        <TextView
+            android:id="@+id/txt_author"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2mdp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:gravity="start"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textAppearance="@style/TextAppearance_light"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/txt_category"
+            app:layout_constraintTop_toBottomOf="@id/txt_title"
+            tools:text="@string/txt_author" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

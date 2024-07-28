@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Digiato</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">خانه</string>
+    <string name="category">دسته بندی ها</string>
+    <string name="video">فیلم ها</string>
+    <string name="profile">پروفایل</string>
+    <string name="loading">Loading</string>
+    <string name="digiato">دیجیاتو</string>
+    <string name="digiato_description">رسانه نسل فردا</string>
+    <string name="txt_trend">پر طرفدار</string>
+    <string name="txt_tools">راهنمای خرید گوشی موبایل – مرداد ماه ۱۴۰۳</string>
+    <string name="suggestion">پیشنهادهای سردبیر</string>
+    <string name="txt_author">آزاد کبیری | 1ساعت قبل</string>
+    <string name="Written_by">نوشته شده توسط</string>
+    <string name="today">تازه‌های امروز</string>
+    <string name="check_connection">اتصال اینترنتی خود را چک کنید</string>
+    <string name="mobile">موبایل</string>
+    <string name="user_profile">حساب کاربری</string>
+    <string name="create_account">ساخت حساب کاربری جدید</string>
+    <string name="login">ورود به حساب کاربری</string>
+    <string name="notification">اعلان</string>
+    <string name="dark_mode">تم برنامه</string>
+    <string name="Feed_back">بازخورد</string>
+    <string name="help_center">راهنمایی</string>
+    <string name="theme_setting">تم برنامه</string>
+    <string name="night">شب</string>
+    <string name="light">روز</string>
+    <string name="hot_today">داغ‌ترین‌های امروز</string>
+    <string name="check_your_connection">اینترنت نداری رفیق !</string>
+
+    <string-array name="theme_settings">
+        <item>حالت روز</item>
+        <item>حالت شب</item>
+
+    </string-array>
+</resources>

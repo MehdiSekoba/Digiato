@@ -1,0 +1,84 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/chinese_black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/white</item>
+        <item name="colorOnPrimaryContainer">@color/white</item>
+        <item name="colorOnSecondary">@color/Anti_Flash_White</item>
+        <item name="colorOnBackground">@color/chinese_black</item>
+        <item name="colorSurfaceContainer">@color/Crayola</item>
+        <item name="colorSurface">@color/Onyx</item>
+        <item name="colorOnSurfaceVariant">@color/Onyx</item>
+        <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+        <item name="materialSwitchStyle">@style/Switch.Default</item>
+        <item name="colorContainer">@color/Anti_Flash_White</item>
+
+
+    </style>
+
+
+    <style name="Widget.App.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView" parent="">
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorSurfaceContainer">@color/white</item>
+        <item name="colorOnSurfaceVariant">@color/Onyx</item>
+        <item name="itemRippleColor">@color/white</item>
+        <item name="colorSurface">@color/Onyx</item>
+    </style>
+
+    <style name="Switch.Default" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <item name="thumbIcon">@drawable/switch_icon</item>
+        <item name="checkedIconSize">16dp</item>
+        <item name="selectorSize">16dp</item>
+        <item name="iconSize">16dp</item>
+        <item name="drawableSize">16dp</item>
+        <item name="itemIconSize">16dp</item>
+        <item name="maxImageSize">16dp</item>
+        <item name="thumbIconTint">@color/white</item>
+        <item name="trackDecorationTint">@color/Anti_Flash_White</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Switch</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Switch" parent="">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorSurfaceVariant">@color/Blue_cola</item>
+    </style>
+    <!--text style-->
+    <style name="title_Style">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="title_Style_setting">
+        <item name="android:textColor">@color/Anti_Flash_White</item>
+    </style>
+
+    <style name="sub_title_Style">
+        <item name="android:textColor">@color/Cool_gray</item>
+    </style>
+
+    <style name="author_color_text">
+        <item name="android:textColor">@color/Cool_gray</item>
+    </style>
+
+    <!--category-->
+    <style name="category_color_text">
+        <item name="android:textColor">@color/Cool_gray</item>
+    </style>
+    <!--icon tint logo-->
+    <style name="logoTintStyle">
+        <item name="tint">@color/white</item>
+    </style>
+    <!--icon tint setting -->
+    <style name="iconTintStyle">
+        <item name="tint">@color/white</item>
+    </style>
+
+    <style name="LoadingProgressbar">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+</resources>

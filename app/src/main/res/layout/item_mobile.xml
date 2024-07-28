@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8mdp"
+    >
+    <!--image-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/item_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_168mdp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/RoundImage"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <!--shadow-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_shadow"
+        app:layout_constraintBottom_toBottomOf="@id/item_image"
+        app:layout_constraintTop_toTopOf="@id/item_image" />
+
+    <!--author img-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_author"
+        android:layout_width="@dimen/_36mdp"
+        android:layout_height="@dimen/_36mdp"
+        android:layout_margin="@dimen/_10mdp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/ImageViewRound"
+        app:strokeColor="@color/white"
+        app:strokeWidth="@dimen/_1mdp"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <!--fav-->
+    <ImageView
+        android:id="@+id/img_bookmark"
+        android:layout_width="@dimen/_32mdp"
+        android:layout_height="@dimen/_32mdp"
+        android:layout_margin="@dimen/_6mdp"
+        android:contentDescription="@string/app_name"
+        android:padding="@dimen/_4mdp"
+        android:src="@drawable/bookmark_out"
+        app:layout_constraintBottom_toBottomOf="@id/img_author"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_author"
+        app:tint="@color/white" />
+
+    <!--author name-->
+    <TextView
+        android:id="@+id/txt_author_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10mdp"
+        android:textAppearance="@style/TextAppearance_mobile_bold"
+        app:layout_constraintBottom_toBottomOf="@id/img_author"
+        app:layout_constraintEnd_toStartOf="@id/img_author"
+        app:layout_constraintStart_toEndOf="@id/img_bookmark"
+        app:layout_constraintTop_toTopOf="@id/img_author"
+        android:textColor="@color/white"
+        tools:text="@string/txt_author" />
+
+    <!--title-->
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8mdp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance_Bold"
+        app:layout_constraintEnd_toStartOf="@id/img_author"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_author"
+        tools:text="@string/txt_tools" />
+
+    <!--description-->
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4mdp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance_light"
+        app:layout_constraintEnd_toStartOf="@id/img_author"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title"
+        tools:text="@string/txt_tools" />
+
+    <!--parent other-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10mdp"
+        android:background="@drawable/bg_blue"
+        android:backgroundTint="@color/Safety_orange"
+        app:layout_constraintBottom_toBottomOf="@id/item_image"
+        app:layout_constraintTop_toBottomOf="@id/item_image"
+        android:paddingBottom="@dimen/_6mdp"
+        android:layout_marginTop="@dimen/_8mdp"
+        android:layout_marginBottom="@dimen/_8mdp"
+        >
+
+        <!--fav-->
+        <ImageView
+            android:id="@+id/img_fav"
+            android:layout_width="@dimen/_40mdp"
+            android:layout_height="@dimen/_40mdp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_6mdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/heart"
+            app:tint="@color/Anti_Flash_White" />
+
+        <!--fav count-->
+        <TextView
+            android:id="@+id/txt_fav_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4mdp"
+            android:textAppearance="@style/TextAppearance_mobile_bold"
+            tools:text="100"
+            android:textColor="@color/white"
+            />
+
+        <!--comment-->
+        <ImageView
+            android:id="@+id/img_comment"
+            android:layout_width="@dimen/_40mdp"
+            android:layout_height="@dimen/_40mdp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_6mdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_comment"
+            app:tint="@color/Anti_Flash_White" />
+
+        <!--comment count-->
+        <TextView
+            android:id="@+id/txt_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4mdp"
+            android:textAppearance="@style/TextAppearance_mobile_bold"
+            tools:text="100"
+            android:textColor="@color/white"
+            />
+
+        <!--share-->
+        <ImageView
+            android:id="@+id/img_share"
+            android:layout_width="@dimen/_40mdp"
+            android:layout_height="@dimen/_40mdp"
+            android:contentDescription="@string/app_name"
+            android:padding="@dimen/_6mdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_share"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/txt_share_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4mdp"
+            android:textAppearance="@style/TextAppearance_mobile_bold"
+            tools:text="100"
+            android:textColor="@color/white"
+            />
+
+        <!--flow page-->
+        <androidx.constraintlayout.helper.widget.Flow
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:constraint_referenced_ids="img_fav,txt_fav_count,img_comment,txt_comment_count,img_share,txt_share_count"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
